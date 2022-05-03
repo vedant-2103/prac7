@@ -4,8 +4,8 @@
 
 Individual::Individual (std::string initialString)                                  
 {
-    lengthofBinaryDNA=initialString.size();
-    for (int i = 0; i < lengthofBinaryDNA; i++)
+    length=initialString.size();
+    for (int i = 0; i < length; i++)
     {
         list_copy[i]='0';
     }
@@ -26,7 +26,7 @@ void Individual::flipBit(int pos)
 
 int Individual::getBit(int pos)
 {
-    if (pos > lengthofBinaryDNA)
+    if (pos > length)
     {
         return -1;
     }
@@ -38,14 +38,14 @@ int Individual::getBit(int pos)
 }
 
 int Individual::getLength()
-{return lengthofBinaryDNA;}
+{return length;}
 
 void Individual::bitRearrange(int pos)
 {
     int num=0;
-    for (int i = 0; i < lengthofBinaryDNA; i++)
+    for (int i = 0; i < length; i++)
     {
-        if (i< lengthofBinaryDNA - pos)
+        if (i< length - pos)
         {
             rearrange_bin_str[i] = binaryString[pos + i];
             num++;
@@ -56,7 +56,7 @@ void Individual::bitRearrange(int pos)
         }
     }
     
-    for (int i = 0; i < lengthofBinaryDNA; i++)
+    for (int i = 0; i < length; i++)
     {
         binaryString[i] = rearrange_bin_str[i];
     }
@@ -66,7 +66,7 @@ int Individual::getMaxOnes()
 {
     int Maxones=0;
     int total=0;
-    for (int i = 0; i < lengthofBinaryDNA; i++)
+    for (int i = 0; i < length; i++)
     {
         if (binaryString[i] =='1')
         {

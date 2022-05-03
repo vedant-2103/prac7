@@ -7,7 +7,7 @@
 class Individual
 {
     public:
-    Individual(int lengthofBinaryDNA);
+    //Individual(int lengthofBinaryDNA);
     Individual(std::string initialString);
     std::string getString();
     int getBit(int pos);
@@ -19,7 +19,7 @@ class Individual
 
 
     private:
-    int lengthofBinaryDNA;
+    int length;
     std::string list_copy;
     std::string binaryString;
     std::string rearrange_bin_str;
