@@ -14,9 +14,9 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k)
 
 int main()
 {
-    int k1;
+    //int k1;
     std::string binarystr1;
-    int k2;
+    //int k2;
     std::string binarystr2;
     return 0;
 }
