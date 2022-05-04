@@ -8,10 +8,11 @@
 class BitFlipProb : public Mutator
 {
     public:
-    Individual* mutate(Individual* list, int k);
+    BitFlipProb(double likelihood);
+    Individual mutate(Individual list, int k);
     
     private:
-    double probability;
+    double prob=0;;
 };
 
 #endif

@@ -1,24 +1,15 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 #include "Mutator.h"
 #include "Individual.h"
 #include "BitFlip.h"
 
-Individual* BitFlip::mutate(Individual* list, int k)
+Individual BitFlip::mutate(Individual list, int k)
 
 {
-    listLength = list -> getLength();
-    end_digit = k % listLength;
-    
-    if (end_digit != 0)
-    {
-        end_digit = end_digit -1;
-    }
-    else
-    {
-        end_digit = listLength-1;
-    }
-    
-    list -> flipBit(end_digit);
+    k-=1;
+    k=k%list.getLength();
+    list.flipBit(k);
     return list;
 }

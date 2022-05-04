@@ -8,11 +8,7 @@
 class BitFlip : public Mutator 
 {
     public:
-    Individual* mutate(Individual* list, int k);
-    
-    private:
-    int listLength;
-    int end_digit;
+    Individual mutate(Individual list, int k);
 };
 #endif
 
